@@ -15,9 +15,15 @@ var save=(req,res,next)=>{
             saveCacheData("save_data",JSON.stringify(data),60*60*24);
         });
         res.send({result:true});
-    }else{
-        res.status(500);
+    }
+    //
+    else if ((dataValidation(strA,strB)==false){
+        
         res.send({result:false});
+    }
+    else
+    {
+        res.status(500);
     }
     
     
