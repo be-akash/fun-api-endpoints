@@ -9,7 +9,7 @@ router.post('/add', function (req, res, next) {
 });
 
 
-/* add data if valid. */
+/* return all the saved string pairs. */
 router.get('/list', function (req, res, next) {
   var listService = require("../service/data-list-service");
   listService(req, res, next);
